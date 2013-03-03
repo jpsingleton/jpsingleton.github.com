@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta charset="utf-8" />
+    <title>Power Data</title>
+    <script src="dygraph-combined.js" type="text/javascript"></script>
+</head>
+<body style="height: 100%;">
+
+    <h3>Graph of electricity usage (historic - raw)
+    </h3>
+
+    <div id="graphdiv" style="width: 97%; height: 75%;">
+    </div>
+    <p>Drag a selection to zoom in. Double click to view all data again.</p>
+    <p>
+        Full write up at <a href="http://unop.co.uk">unop.co.uk</a>. 
+        If you like this sort of thing then checkout <a href="http://shutdownscanner.com">ShutdownScanner.com</a> for more environmental graphing.
+    </p>
+    <script type="text/javascript">
+        g = new Dygraph(
+                document.getElementById("graphdiv"),
+                "rawExample.csv",
+                {
+                    fillGraph: true,
+                    colors: ['#00aa00']
+                }
+              );
+    </script>
+
+</body>
+</html>
